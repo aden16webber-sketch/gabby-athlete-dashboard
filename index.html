@@ -338,6 +338,38 @@
     color: var(--text-primary);
   }
 
+  /* 5K Predictor */
+  .predictor-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .predictor-tile {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    text-align: center;
+  }
+  .predictor-tile .predictor-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .predictor-tile .predictor-time {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .predictor-tile .predictor-sub {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+  }
+
   /* Personal Records — actual trophy shapes, no card box.
      Fill is the EXACT swatch color (--maroon-exact / --green-exact), not the
      legibility-adjusted --maroon/--green used for small text elsewhere. */
@@ -509,6 +541,7 @@
     .week-row { grid-template-columns: repeat(4, 1fr); }
     .pace-row { grid-template-columns: repeat(2, 1fr); }
     .zone-row { grid-template-columns: repeat(2, 1fr); }
+    .predictor-row { grid-template-columns: 1fr; }
     .trophy-row { justify-content: center; }
     .trophy { flex: 0 1 30%; min-width: 100px; }
     .insight-grid { grid-template-columns: 1fr; }
@@ -594,7 +627,7 @@
   <div class="coach-panel" style="margin-top:12px; padding:18px 22px;">
     <div class="insight-card coach-take">
       <div class="framework">Tom "Tinman" Schwartz</div>
-      <div class="text">Monday's prescribed 3×1000m, and the splits tell the story: 7:54, then 7:40, then 7:34/mi, against an 8:40/mi target — every rep 45+ seconds/mile hot, and instead of settling back you got faster each time. HR climbed right with it: 174 avg on rep 1, 185 avg on rep 2, 186 avg on rep 3 with a 194 max — 96% of your 205 max HR, on a session that was supposed to be a controlled threshold rep, not a ceiling test. This is the same "chase the fast feel" instinct that produced the fade on Jul 4, just with a better outcome this time because the reps were short enough to survive it. The prescribed pace exists so this phase builds durability at a repeatable effort, not so you find out what 96% max feels like on day one of a 6-week phase. Hold 8:40/mi next time, especially rep one — and this is exactly the effort level to watch the knee against over the next 24-48 hours, not a "nothing to see here" run.</div>
+      <div class="text">Today was supposed to be 3×1000m at ~8:40/mi, HR 175-183 — the first quality session of Phase 1, kept deliberately conservative so we could track real progress against the 7:05 gap without guessing. What actually happened: 7:54, then 7:40, then 7:35/mi, getting faster each rep instead of settling into the target, with HR climbing 174 → 185 → 186 avg and topping out at 194 — 94.6% of your 205 max, on a session built to be controlled, not a ceiling test. The two jog recoveries barely dropped your heart rate (172 and 174 avg), which means you never actually cleared between reps — that's stacked fatigue disguised as a fast day, not free speed. This is the exact instinct — chase the pace that feels good instead of the number on the plan — and it's showing up on day one of a six-week durability phase that's supposed to be boring on purpose. Hold 8:40/mi next time, especially rep one, and treat the next 24-48 hours as a knee-watch window given how hot this one ran.</div>
     </div>
   </div>
 
@@ -761,6 +794,27 @@
     </div>
   </div>
 
+  <!-- 5K Predictor -->
+  <div class="section-title">5K Predictor</div>
+  <div class="run-banner">Based on WORKOUT!!! on Jul 13 — median hard-effort segment, Riegel-extrapolated to 5K.</div>
+  <div class="predictor-row">
+    <div class="predictor-tile tile-maroon">
+      <div class="predictor-label">My Estimate</div>
+      <div class="predictor-time">26:13</div>
+      <div class="predictor-sub">Riegel, from your actual hardest recent effort</div>
+    </div>
+    <div class="predictor-tile tile-gold">
+      <div class="predictor-label">Garmin's Estimate</div>
+      <div class="predictor-time">21:57</div>
+      <div class="predictor-sub">HR/VO2max-modeled — historically optimistic</div>
+    </div>
+    <div class="predictor-tile tile-green">
+      <div class="predictor-label">Actual 5K PR</div>
+      <div class="predictor-time">23:01</div>
+      <div class="predictor-sub">Oct 24, 2025 — real, run in a race</div>
+    </div>
+  </div>
+
   <!-- Personal Records -->
   <div class="section-title">Personal Records</div>
   <div class="run-banner">Maroon = Watervliet HS (Aug 2021 – May 2025) · Green = Southwestern Michigan College (Aug 2025 – present)</div>
@@ -846,33 +900,33 @@
   <div class="section-title">Coach's Notes</div>
   <div class="coach-panel">
     <div class="coach-overview">
-      Phase 1, Week 1 of 6 starts today — but last week (Jul 6–12) already logged <strong>26.2 mi</strong>, above the ~20+ mi/week range where all three of your past crashes started. The good news: your body's response so far reads like a normal load response, not a warning sign — resting HR climbed from 51 to 59 across the hardest days (Jul 4, Jul 6) then settled back to 53-57 the following week and sits at 54 today. The job this week isn't to add on top of that 26.2 mi — it's to hold here and prove the knee and recovery tolerate this level before Phase 2 adds real intensity extension in September.
+      Phase 1, Week 1 of 6 (targeting ~18 mi) starts today, but last week (Jul 6–12) already logged <strong>26.2 mi</strong> — solidly inside the 20+ mi/week range where each of your three past crashes began. The body's response so far reads like a normal load reaction, not a warning sign: resting HR climbed 51→59 across the hardest days (Jul 4, Jul 6), then eased back to 53-57 and sits at 54 today. The job this week is to hold near 18 mi and prove the knee and recovery tolerate this level before Phase 2 adds real intensity in September — not to build on top of an already-elevated week.
     </div>
     <div class="insight-grid">
       <div class="insight-card">
         <div class="framework">Seiler · Polarized Training</div>
-        <div class="text">Only 2 of the last 13 runs (15%) sat in true Z1/Z2 (HR 103-143) — up slightly from 1 of 14 (7%) last time this was checked, but still far from the ~80% easy the polarized model calls for. Today's session ran at 174-186 avg HR against an 8:40/mi target that should have kept it lower — the pattern of "easy isn't actually easy" is still the dominant one in your data, not a solved problem.</div>
+        <div class="text">Only 2 of the last 14 runs (14%) sat in true Z1/Z2 (HR 103-143) — essentially unchanged from 2 of 13 (15%) at the last check, still far from the ~80% easy the polarized model calls for. Today added another data point to the pattern: the "easy" warmup and cooldown bracketing today's workout ran 158 and 164 avg HR — both Z3/Z4, not Z1/Z2.</div>
       </div>
       <div class="insight-card">
         <div class="framework">Foster · Training Monotony</div>
-        <div class="text">Resting HR rose 51→59 over Jun 30–Jul 7 (the harder days that week), then recovered to the low-mid 50s and sits at 54 today — a spike-then-recover pattern, which is the healthier signal Foster describes, not a stuck plateau. Day-to-day volume also isn't monotonous right now (0 to 7 mi across the last 14 days, including a true rest day Jul 8) — so the monotony risk sitting in your data is intensity monotony (see Seiler), not load monotony.</div>
+        <div class="text">Resting HR rose from 51 to 59 across Jun 30–Jul 7 (the week's hardest days), then recovered to the low-mid 50s and sits at 54 today — a spike-then-recover pattern, the healthier signal Foster describes rather than a stuck plateau. Day-to-day volume also isn't monotonous (1.0 to 7.0 mi swings across the last 14 days, including 1-2 mi streak-maintenance days), so the monotony risk in your data right now is intensity monotony (see Seiler), not load monotony.</div>
       </div>
       <div class="insight-card">
         <div class="framework">Canova · Extending Intensity</div>
-        <div class="text">Today's 1000m reps at 7:54, 7:40, 7:34/mi are actually already inside the range your 7:05/mi goal pace needs — on short reps, at a real cost (96% max HR). That's a genuinely promising signal for where your speed ceiling sits. The Phase 2/3 job through September and October is extending that pace over more distance at a controlled, repeatable effort — not running it faster than prescribed on three reps and calling it progress.</div>
+        <div class="text">Today's 3×1000m ran 7:54, 7:40, 7:35/mi — already faster than the 7:05/mi goal-pace gap would suggest you're ready for on short reps, a genuinely promising ceiling signal — but it came at 94.6% max HR against an 8:40/mi target built for a controlled, repeatable effort. The Phase 2/3 job through September and October is extending race-adjacent pace over more distance at a sustainable effort, not running individual reps hot in week 1 of a 6-week base phase.</div>
       </div>
       <div class="insight-card">
         <div class="framework">2025 BJSM Cohort Study</div>
-        <div class="text">Your longest single run over the last 30 days is still 6.0 mi (Jun 27 and Jul 11 both hit exactly that) — unchanged from the last check, no new single-session spike. Saturday's long run should stay capped near that mark rather than jumping past it, since injury risk tracks your own recent longest run more than weekly-total math.</div>
+        <div class="text">Your longest single run over the last 30 days is still 6.0 mi (Jun 27 and Jul 11 both hit exactly that) — unchanged since the last check, no new single-session spike. This week's planned long run is set at 5 mi, at or under that mark, which is the right call — injury risk tracks your own recent longest run more than weekly-total math.</div>
       </div>
     </div>
     <div class="tips-title">Right now</div>
     <ul class="tips-list">
-      <li><strong>Hold reps to the prescribed pace, still.</strong> Today's 3×1000m ran 45+ sec/mi hot on every rep and finished at 96% max HR — the same instinct flagged after Jul 4, recurring on day one of a new phase. Precision is the point, not the ceiling.</li>
-      <li><strong>Let Tue/Thu/streak days feel boring.</strong> Only 2 of 13 recent runs were genuinely easy — that's still the least-solved part of the plan.</li>
-      <li><strong>Watch the knee over the next 24-48 hours</strong> specifically — today's session ran hotter than prescribed, and hills haven't even been added back in yet.</li>
-      <li><strong>Don't add to last week's 26.2 mi.</strong> That's already above where past crashes started — this week's job is to hold, not ramp.</li>
-      <li>110 days is a real runway. Phase 1 alone is 6 weeks on purpose — no need to rush it.</li>
+      <li><strong>Hold reps to the prescribed pace, not the fast-feeling one.</strong> Today's 3×1000m ran 7:54/7:40/7:35 per mile against an 8:40/mi target and finished at 194 bpm (94.6% max) — the same pattern flagged before, recurring on day one of a new phase.</li>
+      <li><strong>Let Tue/Wed/Thu/Sun streak days feel boring.</strong> Only 2 of the last 14 runs were genuinely Z1/Z2 — still the least-solved part of the plan.</li>
+      <li><strong>Watch the knee over the next 24-48 hours</strong> specifically — today's session ran hotter and faster than prescribed, and hills haven't been reintroduced yet in Phase 1.</li>
+      <li><strong>Don't build on top of last week's 26.2 mi.</strong> This week's target is ~18 mi — the job is to hold and let the body adapt, not ramp again.</li>
+      <li>110 days to race day is real runway — Phase 1 alone is 6 weeks on purpose. No need to rush week 1.</li>
     </ul>
   </div>
 
