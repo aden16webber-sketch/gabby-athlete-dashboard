@@ -370,6 +370,45 @@
     margin-top: 6px;
   }
 
+  /* Race Fueling */
+  .fuel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .fuel-tile {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .fuel-tile .fuel-when {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--maroon);
+    margin-bottom: 6px;
+  }
+  .fuel-tile .fuel-what {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .fuel-tile .fuel-why {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* Race Strategy — pacing */
+  .pacing-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
   /* Personal Records — actual trophy shapes, no card box.
      Fill is the EXACT swatch color (--maroon-exact / --green-exact), not the
      legibility-adjusted --maroon/--green used for small text elsewhere. */
@@ -542,6 +581,8 @@
     .pace-row { grid-template-columns: repeat(2, 1fr); }
     .zone-row { grid-template-columns: repeat(2, 1fr); }
     .predictor-row { grid-template-columns: 1fr; }
+    .fuel-grid { grid-template-columns: 1fr; }
+    .pacing-row { grid-template-columns: repeat(2, 1fr); }
     .trophy-row { justify-content: center; }
     .trophy { flex: 0 1 30%; min-width: 100px; }
     .insight-grid { grid-template-columns: 1fr; }
@@ -815,6 +856,80 @@
       <div class="predictor-sub">Same effort, Riegel-projected to 1600m</div>
     </div>
   </div>
+
+  <!-- Race Fueling -->
+  <div class="section-title">Race Fueling — Bolt for the Heart 5K</div>
+  <div class="run-banner">Sat Jul 25, race morning · vegan · NWS forecast: mid-60s and sunny at the start, light south wind, warming to 80°F by afternoon</div>
+  <div class="fuel-grid">
+    <div class="fuel-tile tile-green">
+      <div class="fuel-when">Thu–Fri (2 days out)</div>
+      <div class="fuel-what">Lean into easy carbs, don't overhaul anything</div>
+      <div class="fuel-why">Rice, pasta, potatoes, oats — all vegan defaults already. No new foods this close to race day; nothing to test, nothing to react to.</div>
+    </div>
+    <div class="fuel-tile tile-gold">
+      <div class="fuel-when">Friday night</div>
+      <div class="fuel-what">Moderate carb dinner, lighter on fiber</div>
+      <div class="fuel-why">Pasta with marinara, tofu, or a rice bowl — a solid vegan carb load. Go easy on beans/lentils and big raw-veggie portions tonight specifically; save the fiber for other nights, not the meal before a race.</div>
+    </div>
+    <div class="fuel-tile tile-maroon">
+      <div class="fuel-when">Morning of (2–3 hrs before)</div>
+      <div class="fuel-what">Simple, low-fiber, low-fat carbs</div>
+      <div class="fuel-why">White toast or a bagel with jam or maple syrup, a banana, or a small bowl of oatmeal light on toppings. Skip nuts, seeds, and high-fiber add-ins this morning — GI comfort matters more than nutrition density today.</div>
+    </div>
+    <div class="fuel-tile tile-green">
+      <div class="fuel-when">30–60 min before</div>
+      <div class="fuel-what">Small top-off if needed</div>
+      <div class="fuel-why">Half a banana or a few dates, sipped water. Mid-60s at the start means heat isn't the concern here — this is just topping off glycogen, not fighting dehydration.</div>
+    </div>
+    <div class="fuel-tile tile-gold">
+      <div class="fuel-when">During the race</div>
+      <div class="fuel-what">Nothing needed</div>
+      <div class="fuel-why">A ~26-minute 5K is too short for in-race fueling to matter. Skip gels and chews — they're solving a problem this race doesn't have.</div>
+    </div>
+    <div class="fuel-tile tile-maroon">
+      <div class="fuel-when">After</div>
+      <div class="fuel-what">Rehydrate, then carbs + vegan protein within an hour</div>
+      <div class="fuel-why">Soy milk, a pea-protein shake, or a tofu/tempeh meal with rice — the carb+protein combo restarts recovery. The afternoon climbs to 80°F, so keep drinking water through the day, not just right after the race.</div>
+    </div>
+  </div>
+
+  <!-- Race Strategy -->
+  <div class="section-title">How to Run the Race — Bolt for the Heart 5K</div>
+  <div class="run-banner">Clear Lake loop + Chessie Trail out-and-back, La Porte IN · flat · Run/Walk event with a mixed-pace field · this is a fitness check, not the goal race</div>
+  <div class="pacing-row">
+    <div class="predictor-tile tile-maroon">
+      <div class="predictor-label">Mile 1</div>
+      <div class="predictor-time">8:35</div>
+      <div class="predictor-sub">Controlled — let the field's adrenaline go past you</div>
+    </div>
+    <div class="predictor-tile tile-gold">
+      <div class="predictor-label">Mile 2</div>
+      <div class="predictor-time">8:25</div>
+      <div class="predictor-sub">Settle in around the out-and-back turnaround</div>
+    </div>
+    <div class="predictor-tile tile-green">
+      <div class="predictor-label">Mile 3</div>
+      <div class="predictor-time">8:15</div>
+      <div class="predictor-sub">Push if it's sustainable, not if it's forced</div>
+    </div>
+    <div class="predictor-tile tile-maroon">
+      <div class="predictor-label">Final 0.1</div>
+      <div class="predictor-time">All out</div>
+      <div class="predictor-sub">Empty the tank — nothing to save it for after this</div>
+    </div>
+  </div>
+  <div class="coach-panel" style="margin-top:12px; padding:18px 22px;">
+    <div class="coach-overview" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+      That pacing targets a low-to-mid-26 finish — close to the 26:13 Predictor, not the 23:01 PR. The PR was set at 2-year-best fitness; chasing that pace off a 2-year-low rebuild would mean blowing up by mile 2, the same accelerating-then-fading pattern already flagged in Monday's threshold reps. This race is a real data point, run honestly at current fitness — not a test of whether the PR pace still exists.
+    </div>
+  </div>
+  <ul class="tips-list" style="margin-top:14px;">
+    <li><strong>It's a Run/Walk event — position matters at the start.</strong> Line up ahead of walkers and casual joggers so the first quarter-mile isn't spent weaving through slower traffic.</li>
+    <li><strong>Out-and-back means the turnaround is a real checkpoint.</strong> Use it to gut-check effort — if mile 2 already feels like mile 3 should, ease off half a beat rather than forcing the split.</li>
+    <li><strong>Course is flat</strong> — no hill-pacing decisions to make, and nothing here should aggravate the knee.</li>
+    <li><strong>Morning start, mid-60s and sunny</strong> — heat isn't a factor at the gun, but the day climbs to 80°F, so this is a fueling/hydration day, not a lounge-outside-after day.</li>
+    <li>Afterward: log the actual splits and HR against this plan — that's the real input for the next 5K Predictor update, not just the finish time.</li>
+  </ul>
 
   <!-- Personal Records -->
   <div class="section-title">Personal Records</div>
