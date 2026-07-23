@@ -286,6 +286,13 @@
   .tag.quality-tag { background: color-mix(in srgb, var(--maroon) 14%, transparent); color: var(--maroon); }
   .tag.easy-tag { background: color-mix(in srgb, var(--green) 12%, transparent); color: var(--green); }
   .tag.rest-tag { background: var(--gridline); color: var(--text-muted); }
+  .tag.done-tag { background: color-mix(in srgb, var(--good) 16%, transparent); color: var(--success-text); }
+  .tag.next-tag { background: color-mix(in srgb, var(--gold) 20%, transparent); color: var(--warning-text); }
+  .day-tile .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .day-tile .tag-row .tag { margin-top: 0; }
+  .day-tile.done { border-left: 4px solid var(--good); }
+  .day-tile .day-check { color: var(--good); margin-left: 4px; }
+  .day-tile .session-detail .actual { display: block; margin-top: 6px; color: var(--text-primary); font-weight: 600; }
 
   /* Paces */
   .pace-row {
@@ -741,29 +748,41 @@
   <div class="section-title">Next Up — Phase 1, Week 2 (Jul 20 – Jul 26)</div>
   <div class="run-banner">Bolt for the Heart 5K is Saturday — the week's normal long-run day becomes race day.</div>
   <div class="week-row">
-    <div class="day-tile quality">
-      <div class="day-name">Mon</div>
+    <div class="day-tile quality done">
+      <div class="day-name">Mon <span class="day-check">✓</span></div>
       <div class="session-type">Threshold</div>
-      <div class="session-detail">4×1000m @ ~8:40/mi, 400m jog<br>+ warmup/cooldown, ~5.3mi — same target as last week, on purpose</div>
-      <div class="tag quality-tag">Hard</div>
+      <div class="session-detail">4×1000m @ ~8:40/mi, 400m jog + warmup/cooldown, ~5.3mi — same target as last week, on purpose<span class="actual">Actual: 5.34mi — reps 8:25/8:19/8:25/8:10/mi, HR to 189 — hot again, but tighter than last week</span></div>
+      <div class="tag-row">
+        <div class="tag quality-tag">Hard</div>
+        <div class="tag done-tag">✓ Done</div>
+      </div>
     </div>
-    <div class="day-tile">
-      <div class="day-name">Tue</div>
+    <div class="day-tile done">
+      <div class="day-name">Tue <span class="day-check">✓</span></div>
       <div class="session-type">Easy</div>
-      <div class="session-detail">Unstructured effort, no HR target, ~2mi</div>
-      <div class="tag easy-tag">Easy</div>
+      <div class="session-detail">Unstructured effort, no HR target, ~2mi<span class="actual">Actual: 2.0mi @ 14:44/mi, HR142 — clean, in zone</span></div>
+      <div class="tag-row">
+        <div class="tag easy-tag">Easy</div>
+        <div class="tag done-tag">✓ Done</div>
+      </div>
     </div>
-    <div class="day-tile">
-      <div class="day-name">Wed</div>
+    <div class="day-tile done">
+      <div class="day-name">Wed <span class="day-check">✓</span></div>
       <div class="session-type">Streak run</div>
-      <div class="session-detail">~1.5mi, genuinely easy, unstructured</div>
-      <div class="tag easy-tag">Easy</div>
+      <div class="session-detail">~1.5mi, genuinely easy, unstructured<span class="actual">Actual: 1.5mi @ 13:44/mi, HR138 — clean, no drift</span></div>
+      <div class="tag-row">
+        <div class="tag easy-tag">Easy</div>
+        <div class="tag done-tag">✓ Done</div>
+      </div>
     </div>
     <div class="day-tile">
       <div class="day-name">Thu</div>
       <div class="session-type">Easy</div>
       <div class="session-detail">Unstructured effort, ~1.5mi — easing toward Saturday</div>
-      <div class="tag easy-tag">Easy</div>
+      <div class="tag-row">
+        <div class="tag easy-tag">Easy</div>
+        <div class="tag next-tag">→ Next</div>
+      </div>
     </div>
     <div class="day-tile">
       <div class="day-name">Fri</div>
